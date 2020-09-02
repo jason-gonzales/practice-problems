@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Repeating Letter</title>
+</head>
+<body>
+  <script>
+function createRepeatingLetters(word, numOfRepeats) {
+newstring ="";
+for(var i = 0; i < word.length; i++) {
+  for(var j =0; j < numOfRepeats; j++) {
+    newstring += word[i];
+  }
+}
+return newstring;
+}
+console.log(createRepeatingLetters("John",3));
+console.log(createRepeatingLetters("car",4));
+console.log(createRepeatingLetters("howdy",1));
+  </script>
+</body>
+</html>
