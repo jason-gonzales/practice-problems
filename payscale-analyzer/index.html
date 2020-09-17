@@ -20,22 +20,23 @@
   //subtract the smallest number from the largest number
   //return the value;
 
+  //Revision
+  //check if the value at the current index is greater than the current largest number
+  //if so then assign current number as new value for largest number
+  //check if the value at the current index is less than the current smallest number
+  // if so then assign current number as new value of smallest number
+
   function payscaleAnalyzer(payList) {
     var largestNum = payList[0];
     var smallestNum = payList[0];
     for(var i = 0; i <= payList.length; i++) {
       if(payList[i] > largestNum) {
         largestNum = payList[i];
-
-      }
-    }
-    for(var i = 0; i <= payList.length; i++) {
-      if(payList[i] < smallestNum) {
+      } else if(payList[i] < smallestNum) {
         smallestNum = payList[i];
-
       }
-    }
-    return  largestNum - smallestNum;
+  }
+  return largestNum - smallestNum;
   }
 
 console.log(payscaleAnalyzer([28,34,21,39]));
