@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spell Checker</title>
+</head>
+<body>
+
+ <script>
+//Define function named spellChecker that takes in 2 arguments, an array of user typed string words, and
+//an array of correctly spelled string words.
+//Function will return 2 arrays
+//One array will contain words that are spelled correctly
+//Second array will contain the words which were spelled incorrectly
+
+//Pseudo code
+//inside the function create 2 empty storage space (empty arrays), one for the correct words and one for incorrect words
+//run a for loop of the values in the array that is being called to access the strings in the arrays
+//make a conditional statement to see if the strings in the array match, and if they do, push to the correct words array
+//else if they do not match, push to the incorrect array
+//return both the correct spelling array and incorrect spelling array
+
+
+function spellChecker(userWords, correctWords) {
+  var correct = [];
+  var wrong = [];
+
+  for(var i = 0; i < userWords.length; i++) {
+    if(userWords[i] === correctWords[i]) {
+      correct.push(userWords[i]);
+    } else if(userWords[i] !== correctWords[i]) {
+      wrong.push(userWords[i]);
+    }
+  }
+  return "correct: " + correct + "," + " incorrect: " + wrong;
+}
+
+
+console.log(spellChecker(["boy","duct","ice cream","sendwich"],["boy","duck","ice cream","sandwich"]))
+console.log(spellChecker(["jam","breat","sound"],["jam","bread","sound"]))
+console.log(spellChecker(["java","CDS","HTMO"],["java","CSS","HTML"]))
+  </script>
+</body>
+</html>
