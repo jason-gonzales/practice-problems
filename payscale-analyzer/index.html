@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payscale Analyzer</title>
+</head>
+<body>
+
+  <script>
+
+  //create storage for largest number and assign array at index 0
+  //create a storage for the smallest number and assign array at index 0
+  //loop through the array to acess all the numbers in the array
+  //make a conditional statement that will identify the largest number in the loop
+  //assign the largest number to the largest number storage
+  //loop through the array to identify the smallest number
+  //make another conditional statement that will identify the smallest number in the loop
+  //assign the smallest number in the array to the smallest number storage
+  //subtract the smallest number from the largest number
+  //return the value;
+
+  function payscaleAnalyzer(payList) {
+    var largestNum = payList[0];
+    var smallestNum = payList[0];
+    for(var i = 0; i <= payList.length; i++) {
+      if(payList[i] > largestNum) {
+        largestNum = payList[i];
+
+      }
+    }
+    for(var i = 0; i <= payList.length; i++) {
+      if(payList[i] < smallestNum) {
+        smallestNum = payList[i];
+
+      }
+    }
+    return  largestNum - smallestNum;
+  }
+
+console.log(payscaleAnalyzer([28,34,21,39]));
+console.log(payscaleAnalyzer([18,22,19,26]));
+console.log(payscaleAnalyzer([41.50,27.25,32.50,29.60]));
+  </script>
+</body>
+</html>
