@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day-Finder</title>
+</head>
+<body>
+  <script>
+  //Brainstorm
+  //make a function dayFinder that will take in a string that represents a date("MM/DD/YYYY")
+  //return a string which will be the day of the week for the argument date
+  //use js Date object
+
+  //Pseudo code
+    //create variable that will contain the value of an array containing strings of the days in a week
+    //create empty storage space that will store new Date object value from the stringDate argument which will b
+    //create empty storage space that will store value of the exact day
+
+
+  function dayFinder(stringDate) {
+    var week = ["Sunday","Monday", "Tuesday","Wednesday", "Thursday","Friday","Saturday"];
+    var date = "";
+    var day = "";
+
+    date = new Date(stringDate);
+    console.log(date);
+    day = date.getDay();
+    return week[day];
+
+  }
+
+  console.log(dayFinder("05/22/1946"));
+  console.log(dayFinder("01/20/2001"));
+  console.log(dayFinder("03/15/1988"));
+  </script>
+</body>
+</html>
