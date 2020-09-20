@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Convert Minutes to Seconds</title>
+</head>
+<body>
+  <script>
+    //function will receive a string that will represent amount of time
+    //in minutes, and returns a numeric value that will represent the same length
+    //of time in seconds
+    //Pseudo
+    //convert string on numbers to integers
+    //take the
+
+
+    function convertMinutesToSeconds(timeToConvert) {
+      var minutes = parseInt(timeToConvert);
+      var seconds = parseInt(timeToConvert.slice(-2));
+      var minToSec = minutes * 60;
+
+      return minToSec + seconds;
+
+    }
+
+console.log(convertMinutesToSeconds("15:34"));
+console.log(convertMinutesToSeconds("02:45"));
+console.log(convertMinutesToSeconds("08:21"));
+  </script>
+</body>
+</html>
