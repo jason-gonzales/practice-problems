@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finding Nemo</title>
+</head>
+<body>
+  <script>
+    //function will take in a string, that contains a series of words
+    //will inlude the word nemo
+    //return numerical value where the word nemo is located
+    //PC
+    //split the string into words
+    //identify the string Nemo
+    //return the location of the word nemo based in terms of numerical location
+
+    function findingNemo(sentence) {
+      var word = sentence.split(" ");
+      for(var i = 0; i < word.length; i++) {
+
+        if(word[i] === "Nemo") {
+          return i + 1;
+        }
+      }
+    }
+
+
+
+
+    console.log(findingNemo("I am Nemo")) // -> 3
+    console.log(findingNemo("Where is Nemo my son?")) // -> 3
+    console.log(findingNemo("Nemo is my name")) // -> 1
+    console.log(findingNemo("I would like to meet Nemo one day"))
+  </script>
+</body>
+</html>
