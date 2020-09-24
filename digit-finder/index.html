@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digit Finder</title>
+</head>
+<body>
+<script>
+  //make a storage container for numbers
+  //determine the number of digits in a number
+  //check to see if the number of digits match the second argument
+  //if the number matches then place it in the storage
+
+
+
+  function digitFilter(numbersArray,numberFilter) {
+    result = [];
+    for(var i = 0; i < numbersArray.length; i++) {
+      var str = numbersArray[i].toString();
+      var length = str.length;
+      if(length === numberFilter) {
+        result.push(numbersArray[i])
+      }
+      }
+      return result;
+    }
+
+
+
+  console.log(digitFilter([23, 312, 24, 243, 43], 3)) // -> [312, 243]
+  console.log(digitFilter([23, 315, 231, 54, 72], 2)) // -> [23, 54, 72]
+  console.log(digitFilter([1, 4323, 23, 4565, 3, 4], 1)) // -> [1, 3, 4]
+</script>
+</body>
+</html>
