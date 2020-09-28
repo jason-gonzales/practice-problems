@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Volume Calculator</title>
+</head>
+<body>
+  <script>
+    //ps
+    //multiply all numbers in their given array index
+    //then add each solution to each other
+    //return total of added numbers
+
+    function volumeCalculator(boxesArray) {
+      var result = 0;
+      for(var i = 0; i < boxesArray.length;i++) {
+       var initial = 1;
+       for(var j = 0; j < boxesArray[i].length; j++) {
+        initial *= boxesArray[i][j]
+       }
+       result += initial;
+    }
+    return result;
+    }
+    console.log(volumeCalculator([[3, 3, 3], [4, 4, 4], [5, 5, 5]])) // -> 216
+    console.log(volumeCalculator([[5, 1, 4], [8, 5, 4], [3, 1, 7]])) // -> 201
+    console.log(volumeCalculator([[5, 4, 2], [12, 15, 21], [7, 7, 7]])) // -> 4163
+  </script>
+</body>
+</html>
