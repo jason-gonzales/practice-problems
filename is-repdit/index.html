@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+
+      function isRepdigit(num) {
+        let strNum = num.toString();
+        let start = strNum[0];
+        for (let i = 1; i < strNum.length; i++) {
+          if (start === strNum[i]) {
+            return true;
+          } else {
+            return false;
+          }
+        }
+
+        if (num === 0) {
+          return true;
+        }
+        return true;
+      }
+
+
+
+
+
+  //A repdigit is a positive number composed out of the same digit.Create a function that takes an integer and returns whether it's a repdigit or not.
+
+
+
+
+      //console.log(isRepdigit(6666)) //➞ true
+
+      //console.log(isRepdigit(0)) //➞ true
+
+      //console.log(isRepdigit(-11)) //➞ false
+  </script>
+</body>
+</html>
