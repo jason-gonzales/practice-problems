@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Account Number Protector</title>
+</head>
+<body>
+<script>
+  //make function that will take in a string containing 16 numbers
+  //return only the last 4 numbers in a string with ** as prefix
+  //create empty storage space for new string containing the ** prefix and the last 4 digits
+  //run a for loop that will pass through all the numbers in the string
+  //change numbers at index 10 and 11 to * and push the * to the empty storage
+  //push numbers at index 12 to 15 to the empty storage
+
+  function accountNumberProtector(cardNumberString) {
+    var result = "";
+    for(var i = 0; i < cardNumberString.length; i++) {
+      result = "**" + cardNumberString.slice(12);
+
+      }
+
+    return result;
+  }
+
+
+console.log(accountNumberProtector("5543223485638832"));
+console.log(accountNumberProtector("8934235477210943"));
+  </script>
+</body>
+</html>
