@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    function concat(...args) {
+        let result = [];
+        args.forEach(el => {
+          if (el) {
+            result.push(...el)
+          }
+        })
+        return result;
+      }
+
+
+
+
+      console.log(concat([1, 2, 3], [4, 5], [6, 7])) //➞ [1, 2, 3, 4, 5, 6, 7]
+
+      console.log(concat([1], [2], [3], [4], [5], [6], [7])) //➞ [1, 2, 3, 4, 5, 6, 7]
+
+      console.log(concat([1, 2], [3, 4])) //➞ [1, 2, 3, 4]
+
+      console.log(concat([4, 4, 4, 4, 4])) //➞ [4, 4, 4, 4, 4]
+  </script>
+</body>
+</html>
