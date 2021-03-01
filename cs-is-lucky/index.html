@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Is Lucky</title>
+</head>
+<body>
+  <script>
+
+  function isLucky(n) {
+    let result1 = 0;
+    let result2 = 0;
+    let length = n.toString().length / 2;
+    let num = n.toString().split('').map(Number);
+    let first = num.slice(0, length)
+    let second = num.slice(length)
+    for (let i = 0; i < first.length; i++) {
+      result1 += first[i];
+      result2 += second[i];
+    }
+    if (result1 === result2) {
+      return true;
+    }
+    else {
+      return false;
+    }
+  }
+
+//split up value into an array of numbers
+//find the total number of index
+//add the first half of array
+//add second half of array
+//if first half is equal to second half then return true
+//otherwise return false
+
+// Ticket numbers usually consist of an even number of digits. A ticket number is considered lucky if the sum of the first half of the digits is equal to the sum of the second half.
+
+// Given a ticket number n, determine if it's lucky or not.
+
+// Example
+
+// For n = 1230, the output should be
+// isLucky(n) = true;
+// For n = 239017, the output should be
+// isLucky(n) = false.
+
+  </script>
+
+</body>
+</html>
