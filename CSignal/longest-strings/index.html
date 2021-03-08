@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Longest Strings</title>
+</head>
+<body>
+<script>
+  // Given an array of strings, return another array containing all of its longest strings.
+
+    // Example
+
+    // For inputArray = ["aba", "aa", "ad", "vcd", "aba"], the output should be
+    // allLongestStrings(inputArray) = ["aba", "vcd", "aba"].
+
+    function allLongestStrings(inputArray) {
+      let longest = inputArray[0].length;
+      for (let i = 1; i < inputArray.length; i++) {
+        if (inputArray[i].length > longest) {
+          longest = inputArray[i].length;
+        }
+      }
+      const result = inputArray.filter(word => word.length === longest);
+      return result;
+    }
+
+//return all of the longest strings in the array
+//initialize length of first element
+//go through each element inside the array
+//compare initialized length to length of other elements in array
+//change initialized length to length of new longest element
+</script>
+</body>
+</html>
