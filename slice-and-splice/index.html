@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slice and Splice</title>
+</head>
+<body>
+  <script>
+
+    // frankenSplice([1, 2, 3], [4, 5], 1) should return [4, 1, 2, 3, 5].
+
+    //     Passed
+    //   frankenSplice([1, 2], ["a", "b"], 1) should return ["a", 1, 2, "b"].
+
+  function frankenSplice(arr1, arr2, n) {
+      let copy2 = arr2.slice();
+      let ar = null;
+      for (let i = arr1.length - 1; i >= 0; i--) {
+
+        copy2.splice(n, 0, arr1[i])
+      }
+
+      return copy2
+    }
+
+    console.log(frankenSplice([1, 2, 3], [4, 5, 6], 1));
+
+//begin inserting values from arr1 to arr2 starting at the index of value n
+//go through each value inside the first array starting from the end
+//use splice to insert values from first array starting from the value of n
+//return copied array with new values from first array
+  </script>
+</body>
+</html>
