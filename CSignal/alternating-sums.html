@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alternating Sums</title>
+</head>
+<body>
+<script>
+  function alternatingSums(a) {
+    let result = [];
+    let even = 0;
+    let odd = 0;
+    for (const val of a.entries()) {
+      if (val[0] % 2 === 0) {
+        even += val[1]
+      } else {
+        odd += val[1]
+      }
+    }
+    return result = [even, odd]
+  }
+
+
+//return an array of two integers where 1st element is the total weight of team 1 and second element is total weight of team 2
+//a = [50, 60, 60, 45, 70]
+//output = [180, 105]
+
+//make a storage to place added values
+//identify the indexes that are even and add those values together
+//identify the indexes that are odd and add those values together
+//store both values into the storage
+
+</script>
+</body>
+</html>
