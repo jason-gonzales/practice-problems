@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Border</title>
+</head>
+<body>
+<script>
+  //Given a rectangular matrix of characters, add a border of asterisks(*) to it.
+
+    //input : picture = ["abc",
+    //                   "ded"]
+    //output : addBorder(picture) = ["*****",
+    //                               "*abc*",
+    //                               "*ded*",
+    //                               "*****"]
+
+    function addBorder(picture) {
+      let lengthOfWall = picture[0].length + 2;
+      let wall = "";
+      for (let i = 0; i < lengthOfWall; i++) {
+        wall += "*"
+
+      }
+      picture.unshift(wall);
+      picture.push(wall);
+
+      for (let j = 1; j < picture.length - 1; j++) {
+        picture[j] = "*".concat(picture[j], "*");
+        console.log(picture[j])
+      }
+
+      return picture;
+    }
+
+
+//grab the length of string at first index and add 2
+//run a loop for the length of wall and then add "*" to the value of wall
+//use unshift to add wall before the string
+//use push to add wall after the string
+//run a loop for the string only, and then use concat to add "*" before and after string
+
+</script>
+</body>
+</html>
