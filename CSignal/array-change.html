@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Array Change</title>
+</head>
+<body>
+<script>
+
+  // You are given an array of integers.On each move you are allowed to increase exactly one of its
+  // element by one.Find the minimal number of moves required to obtain a strictly increasing sequence
+  // from the input.
+
+      Example
+
+    For inputArray = [1, 1, 1], the output should be
+    arrayChange(inputArray) = 3.
+  function arrayChange(inputArray) {
+      let count = 0;
+
+      for (let i = 0; i < inputArray.length - 1; i++) {
+
+        if (inputArray[i] >= inputArray[i + 1]) {
+          let difference = inputArray[i] + 1 - inputArray[i + 1];
+          inputArray[i + 1] = inputArray[i] + 1;
+          count += difference;
+        }
+      }
+      return count;
+    }
+
+//make a variable to count
+//run a loop and make sure to not include the last element
+//make a conditional if current value is greater than or equal to the next value
+//calculate the difference by subtracting the value infront to the value behind (current value) plus 1
+//assign the current value plus 1 to the value infront
+//decrement the value of difference to the value count
+//return count
+</script>
+</body>
+</html>
