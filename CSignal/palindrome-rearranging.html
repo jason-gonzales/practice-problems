@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Palindrom Rearanging</title>
+</head>
+<body>
+<script>
+  // Given a string, find out if its characters can be rearranged to form a palindrome.
+
+    // Example
+
+    // For inputString = "aabb", the output should be
+    // palindromeRearranging(inputString) = true.
+
+    // We can rearrange "aabb" to make "abba", which is a palindrome.
+
+    function palindromeRearranging(inputString) {
+      let arr = inputString.split("")
+      let obj = {}
+
+      for (let i = 0; i < arr.length; i++) {
+        if (!obj.hasOwnProperty(arr[i])) {
+          obj[arr[i]] = 1;
+        } else {
+          obj[arr[i]]++
+        }
+      }
+      let oddCount = 0;
+      for (val in obj) {
+        if (obj[val] % 2 !== 0) {
+          oddCount++
+        }
+      }
+      return oddCount > 1 ? false : true;
+    }
+
+
+//split up the string into an array
+//make a storage thats is an object
+//run a loop of the array, and if the element does not exist in the object,
+//add that element into the object, making the element the key and number
+//of it the value
+//if the element does exist, then increment the value
+//make a counter variable that will increment it for every odd value
+//run a for in loop in order to grab the value of the key property and
+//if it is not an even number then increment the counter
+//return false if counter is greater than 1
+
+
+</script>
+</body>
+</html>
