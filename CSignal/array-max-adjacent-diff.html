@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Array Max Adjacent Diff</title>
+</head>
+<body>
+<script>
+  // Given an array of integers, find the maximal absolute difference between any two of its adjacent elements.
+
+  // Example
+
+  // For inputArray = [2, 4, 1, 0], the output should be
+  // arrayMaximalAdjacentDifference(inputArray) = 3.
+
+  function arrayMaximalAdjacentDifference(inputArray) {
+    let arr = [];
+    for (let i = 1; i < inputArray.length; i++) {
+      arr.push(inputArray[i] - inputArray[i - 1])
+      arr = arr.map(val => Math.floor(Math.abs(val) * 100) / 100);
+
+    }
+    return Math.max(...arr)
+  }
+
+//find the differences of each values that are next to each other
+//return the highest number of difference
+
+//make an empty storage array;
+//run a loop starting from index 1
+//inside the loop, subtract prior index to current index and push the -
+//value to the storage array
+//make all integers in array positive by using map, Math.floor and Math.abs
+//return the max value in the array
+</script>
+</body>
+</html>
