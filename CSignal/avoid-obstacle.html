@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Avoid Obstacle</title>
+</head>
+<body>
+<script>
+  // You are given an array of integers representing coordinates of
+    // obstacles situated on a straight line.
+
+    // Assume that you are jumping from the point with coordinate 0 to
+    // the right. You are allowed only to make jumps of the same length
+    // represented by some integer.
+
+    // Find the minimal length of the jump enough to avoid all the obstacles.
+
+    // Example
+
+    // For inputArray = [5, 3, 6, 7, 9], the output should be
+    // avoidObstacles(inputArray) = 4.
+
+    function avoidObstacles(inputArray) {
+      for (var i = 1; ; i++) {
+
+        if (inputArray.every(el => el % i != 0)) {
+          return i
+        }
+      }
+    }
+
+    /*starting from 0, find the lowest number that does not divide perfectly
+    into any of the obstacle numbers. Use every() to find out if element equally
+    divides to zero. If it does its gonna be false and nothing happens.
+    If its true, then we found the number which is the value of i.
+    */
+
+</script>
+</body>
+</html>
