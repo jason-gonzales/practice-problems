@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Box Blur</title>
+</head>
+<body>
+<script>
+  /*
+  Last night you partied a little too hard. Now there's a black and white photo of you
+  that's about to go viral! You can't let this ruin your reputation, so you want to apply
+  the box blur algorithm to the photo to hide its content.
+
+  The pixels in the input image are represented as integers. The algorithm distorts the
+  input image in the following way: Every pixel x in the output image has a value equal
+  to the average value of the pixel values from the 3 × 3 square that has its center at x,
+  including x itself. All the pixels on the border of x are then removed.
+
+  Return the blurred image as an integer, with the fractions rounded down.
+
+  Example
+
+  For
+
+  image = [[1, 1, 1],
+           [1, 7, 1],
+           [1, 1, 1]]
+  the output should be boxBlur(image) = [[1]].
+  */
+    function boxBlur(image) {
+
+      let imageArr = [];
+
+      for (let i = 0; i < image.length - 2; i++) {
+        console.log(image[i]) //[1, 1, 1]
+        let line = [];
+        for (let x = 0; x < image[i].length - 2; x++) {
+          console.log(image[i][x]) // 1
+          let sum = 0;
+          for (let a = i; a < i + 3; a++) {
+            for (let b = x; b < x + 3; b++) {
+              console.log(image[a][b]) //1 1 1 1 7 1 1 1 1
+              sum += image[a][b]
+            }
+          }
+          line.push(Math.floor(sum / 9));
+        }
+        imageArr.push(line)
+      }
+      return imageArr;
+    }
+
+</script>
+</body>
+</html>
