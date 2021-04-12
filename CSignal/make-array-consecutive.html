@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Array Consecutive</title>
+</head>
+<body>
+<script>
+  /*Example
+
+  For statues = [6, 2, 3, 8], the output should be
+  makeArrayConsecutive2(statues) = 3.
+
+  Ratiorg needs statues of sizes 4, 5 and 7.
+  */
+
+    function makeArrayConsecutive2(statues) {
+      statues.sort((a, b) => {
+        return a - b;
+      })
+      let min = statues[0];
+      let max = statues[statues.length - 1]
+      let count = 0;
+      for (let i = min; i < max; i++) {
+        if (statues.indexOf(i) === -1) {
+          count++
+        }
+      }
+
+      return count;
+    }
+
+    /*PS
+    - sort the numbers inside of the array from lowest to largest
+    - assign the lowest and largest numbers to a variable
+    - run a for loop, starting from the variable that the lowest num
+        was assigned to and ending at the variable that the largest num
+        was assigned to
+    - make a variable counter, and make a conditional that will increment counter
+        when the indexOf the loop is equal to -1
+    - return the counter variable
+    */
+</script>
+</body>
+</html>
