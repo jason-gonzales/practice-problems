@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Even Digits Only</title>
+</head>
+<body>
+<script>
+  /*Check if all digits of the given integer are even.
+
+  Example
+
+  For n = 248622, the output should be
+  evenDigitsOnly(n) = true;
+  For n = 642386, the output should be
+  evenDigitsOnly(n) = false.
+  */
+
+  function evenDigitsOnly(n) {
+  nString = n.toString()
+  nString.split('')
+
+
+    for (let i = 0; i < nString.length; i++) {
+      if (nString[i] % 2 !== 0) {
+        return false
+      }
+    }
+    return true;
+}
+
+    /*PS
+    - turn n which are numbers into a string
+    - turn the digits into an array of individual numbers
+    - run a loop to iterate through each number
+    - make a conditional if the number is not an even number with modulo,
+      then return false
+    */
+</script>
+</body>
+</html>
