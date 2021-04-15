@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alphabet Shift</title>
+</head>
+<body>
+<script>
+  /*Given a string, your task is to replace each of its characters by the next one in the English alphabet; i.e. replace a with b, replace b with c, etc (z would be replaced by a).
+
+  Example
+
+  For inputString = "crazy", the output should be alphabeticShift(inputString) = "dsbaz".
+  */
+
+    function alphabeticShift(inputString) {
+      let alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k',
+        'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+
+      inputString = inputString.split("");
+      for (let i = 0; i < inputString.length; i++) {
+        let indexVal = 0;
+        if (inputString[i] !== 'z') {
+          indexVal = alphabet.indexOf(inputString[i]) + 1
+          console.log(indexVal)
+        }
+        inputString[i] = alphabet[indexVal]
+      }
+      return inputString.join("")
+    }
+
+    /*PS
+    - make an array of the alphabet
+    - split up the word that is inputString into an array of its letters
+    - run a loop on inputString array
+    - initialize a variable to 0
+    - make a conditional where if the letter of the index does not equal to 'z'
+      then add a 1 to the number of the index and assign it to indexVal
+    - reassign the letters of indexVal of the alphabet array to the the index of inputString array
+    - join the letters of the inputString array
+      */
+</script>
+</body>
+</html>
