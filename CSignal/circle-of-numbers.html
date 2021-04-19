@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Circle of Numbers</title>
+</head>
+<body>
+<script>
+  /*
+  Consider integer numbers from 0 to n - 1 written down along the circle in such a way
+   that the distance between any two neighboring numbers is equal
+   (note that 0 and n - 1 are neighboring, too).
+
+  Given n and firstNumber, find the number which is written in the radially opposite
+   position to firstNumber.
+
+  Example
+
+  For n = 10 and firstNumber = 2, the output should be
+  circleOfNumbers(n, firstNumber) = 7.
+  */
+
+    function circleOfNumbers(n, firstNumber) {
+      let halfWay = n / 2; //5
+      for (let i = 0; i < n; i++) {
+        if (firstNumber < halfWay) {
+          console.log(firstNumber + halfWay) //2 + 5
+          return firstNumber + halfWay; // 7
+
+        }
+      }
+      return firstNumber - halfWay;
+    }
+
+    /*PS
+    - divide the number of points in a circle by 2
+    - run a loop of the points in the circle (n)
+    - if the value of firstNumber is less than the halfWay point,
+    - then add the value of firstNumber to the value of halfWay
+    - if its not less than the halfway number,
+    - then substract the value of halfWay from the value of firstNumber*/
+</script>
+</body>
+</html>
