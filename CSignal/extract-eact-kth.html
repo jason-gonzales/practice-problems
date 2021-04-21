@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Extract Eacth Kth</title>
+</head>
+<body>
+<script>
+  /*Given array of integers, remove each kth element from it.
+
+  Example
+
+  For inputArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] and k = 3, the output should be
+  extractEachKth(inputArray, k) = [1, 2, 4, 5, 7, 8, 10].
+  */
+    function extractEachKth(inputArray, k) {
+      return inputArray.filter((el, i) => {
+        return (i + 1) % k !== 0;
+      })
+    }
+
+
+    /*PS
+    - use filter method to filter out elements that are divisible by
+      the value of k
+    - return the elements that are not divisible by the value of k
+
+    */
+</script>
+</body>
+</html>
