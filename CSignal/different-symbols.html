@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Different Symbols</title>
+</head>
+<body>
+<script>
+  /*Given a string, find the number of different characters in it.
+
+  Example
+
+  For s = "cabca", the output should be
+  differentSymbolsNaive(s) = 3.
+
+  There are 3 different characters a, b and c.
+  */
+    function differentSymbolsNaive(s) {
+      let result = [];
+      for (let i = 0; i < s.length; i++)
+        if (!result.includes(s[i])) {
+          result.push(s[i])
+          console.log(result) // c a b
+        }
+      return result.length;
+    }
+
+
+    /*ps
+    - make a storage array to push the letters in
+    - iterate through the string
+    - if the value is not included in the storage array,
+    - then push the value into the storage array
+    - return the length of the storage array
+    */
+</script>
+</body>
+</html>
