@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Array Max Consecutive Sum</title>
+</head>
+<body>
+<script>
+  /*Given array of integers, find the maximal possible sum of some of its k consecutive elements.
+
+  Example
+
+  For inputArray = [2, 3, 5, 1, 6] and k = 2, the output should be
+  arrayMaxConsecutiveSum(inputArray, k) = 8.
+  All possible sums of 2 consecutive elements are:
+
+  2 + 3 = 5;
+  3 + 5 = 8;
+  5 + 1 = 6;
+  1 + 6 = 7.
+  Thus, the answer is 8.*/
+
+    function arrayMaxConsecutiveSum(inputArray, k) {
+      let max = -Infinity;
+      let currentSum = 0;
+      for (let i = k - 1; i < inputArray.length; i++) {
+        currentSum = 0;
+        // console.log(inputArray[i]) // 3 5 1 6
+        for (let j = 1; j < k; j++) {
+          // console.log(inputArray[i - j]) // 2 3 5 1
+          currentSum += inputArray[i - j];
+          // console.log(currentSum) // 2 3 5 1
+        }
+        if (inputArray[i] + currentSum > max) {
+          max = inputArray[i] + currentSum;
+        }
+      }
+      return max;
+    }
+
+    /*ps
+    - make a storage of the max consecutive sum
+    - storage for current iterated consecutive sum
+    - make loop stop at the value of k
+    - first loop starts at k - 1
+    - second loop is to dynamically sum the consecutive elements
+    - start the loop at index 1 to get inputArray[i-1] and then increment
+      until it reaches the value k
+    - sum the consecutive elements using additional assignment
+    - assign lowest to the entire sum if it is largest than lowest amount
+    (copyright dotkeenan)
+
+    */
+</script>
+</body>
+</html>
