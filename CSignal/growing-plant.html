@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Growing Plant</title>
+</head>
+<body>
+<script>
+  /*Caring for a plant can be hard work, but since you tend to it regularly,
+  you have a plant that grows consistently. Each day, its height increases
+  by a fixed amount represented by the integer upSpeed. But due to lack of
+  sunlight, the plant decreases in height every night, by an amount represented
+   by downSpeed.
+
+  Since you grew the plant from a seed, it started at height 0 initially.
+  Given an integer desiredHeight, your task is to find how many days it'll
+  take for the plant to reach this height.
+
+  Example
+
+  For upSpeed = 100, downSpeed = 10, and desiredHeight = 910, the output
+  should be growingPlant(upSpeed, downSpeed, desiredHeight) = 10. */
+
+    function growingPlant(upSpeed, downSpeed, desiredHeight) {
+      let days = 0;
+      let height = 0;
+
+      while (height < desiredHeight) {
+        height += upSpeed
+        days++
+        console.log("before", height)
+        if (height < desiredHeight) {
+          height -= downSpeed;
+          console.log("after", height)
+        }
+      }
+      return days
+    }
+
+
+    /*ps
+    - set a variable to 0 as the initial height of the plant
+    - run a loop that will do an additional assignment that will store
+      all the added value of upSpeed into the value of height,
+      WHILE height is still less than the value of desiredHeight
+    - make a conditional IF statement, since if the value of height after
+      the additional assignment is still less than the desired height,
+    - then you do a subtraction assignment that substracts the values of
+      downSpeed and then stores it in the height variable
+    - return the incrememented value of days
+
+    */
+</script>
+</body>
+</html>
