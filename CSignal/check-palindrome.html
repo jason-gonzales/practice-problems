@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Check Palindrome</title>
+</head>
+<body>
+  <script>
+    /*Example
+
+  For inputString = "aabaa", the output should be
+  checkPalindrome(inputString) = true;
+  For inputString = "abac", the output should be
+  checkPalindrome(inputString) = false;
+  For inputString = "a", the output should be
+  checkPalindrome(inputString) = true.
+  */
+      function checkPalindrome(inputString) {
+        let wordReversed = "";
+        for (let i = inputString.length - 1; i >= 0; i--) {
+          wordReversed += inputString[i];
+        }
+        if (wordReversed === inputString) {
+          return true;
+        } else {
+          return false;
+        }
+      };
+
+
+      /*inputString "aabaa", the output should be true
+       "abac" the output is false
+
+       pseudocode
+       -make a storage for reversed string
+       -go through each letter of the word from the back and then
+          store every letter in that storage for reversed string
+       - compare the original string to the reversed string
+          and if they are equal then return true
+       */
+  </script>
+</body>
+</html>
